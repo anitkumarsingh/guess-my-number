@@ -8,7 +8,7 @@ html {
 }
 body {
   font-family: 'Press Start 2P', cursive, sans-serif;
-  background-color: black;
+  background-color: #222;
   color: white;
 }
 .btn{
@@ -52,17 +52,20 @@ body {
   background-color: white;
 }
 .guessed-number {
-  padding: 5rem 6rem;
+  padding: 4rem 6rem;
+  width: 15rem;
   background-color: #f6f6f6;
   border: 1px solid;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: black;
   background-color: #f6f6f6;
   font-size: 4.8rem;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
 }
 .user-input-container {
   display: grid;

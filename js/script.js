@@ -3,7 +3,8 @@
 let score = 20;
 let hightScore = 0;
 
-const computerGuess = Math.trunc(Math.random() * 20 + 1);
+let computerGuess = Math.trunc(Math.random() * 20 + 1);
+document.querySelector('.guessed-number').textContent = computerGuess;
 document.querySelector('.score-number').textContent = score;
 document.querySelector('.high-score').textContent = hightScore;
 
@@ -15,9 +16,11 @@ document.querySelector('.btn-check').addEventListener('click', function () {
     document.querySelector('.guessed-number').textContent = computerGuess;
     document.querySelector('.msg').textContent = '🎉 Correct Number!';
     document.querySelector('body').style.backgroundColor = '#60b347';
-    document.querySelector('.enter-number').style.backgroundColor ='#60b347'
-    document.querySelector('.guessed-number').style.width = '16%';
-    hightScore = score;
+    document.querySelector('.enter-number').style.backgroundColor = '#60b347';
+    document.querySelector('.guessed-number').style.width = '20rem';
+    if (score > hightScore) {
+      hightScore = score;
+    }
     document.querySelector('.high-score').textContent = hightScore;
   } else if (guess < computerGuess) {
     if (score > 1) {
@@ -43,5 +46,14 @@ document.querySelector('.btn-check').addEventListener('click', function () {
 document
   .querySelector('.btn-play-again')
   .addEventListener('click', function () {
-    console.log('asdas');
+    computerGuess = Math.trunc(Math.random() * 20 + 1);
+    score = 20;
+    document.querySelector('.guessed-number').textContent = '?';
+    document.querySelector('.score-number').textContent = score;
+    document.querySelector('.enter-number').value = ' ';
+    document.querySelector('.msg').textContent = 'Start guessing...';
+    document.querySelector('body').style.backgroundColor = '#222';
+    document.querySelector('.enter-number').style.backgroundColor = '#222';
+    document.querySelector('.guessed-number').style.width = '15rem';
+    document.querySelector('.guessed-number').textContent = computerGuess;
   });
