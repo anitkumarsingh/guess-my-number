@@ -2,8 +2,8 @@
 
 let score = 20;
 let hightScore = 0;
-
 let computerGuess = Math.trunc(Math.random() * 20 + 1);
+
 document.querySelector('.guessed-number').textContent = computerGuess;
 document.querySelector('.score-number').textContent = score;
 document.querySelector('.high-score').textContent = hightScore;
