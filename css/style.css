@@ -11,6 +11,12 @@ body {
   background-color: black;
   color: white;
 }
+.btn{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
 .container {
   max-width: 120rem;
   margin: 0 auto;
